@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C9F0570-17D4-4B6D-BCE7-7A7BFCF855F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinFormsServiceStationApp</RootNamespace>
+    <AssemblyName>WinFormsServiceStationApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.2.2.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.1.2.2\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit.Core, Version=1.2.2.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.Core.1.2.2\lib\net45\LinqKit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QueryDesignerCore, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Edvido.QueryDesignerCore.5.0.0\lib\netstandard2.0\QueryDesignerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\202204021301015_InitialCreate.cs" />
+    <Compile Include="Migrations\202204021301015_InitialCreate.designer.cs">
+      <DependentUpon>202204021301015_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071201198_Created.cs" />
+    <Compile Include="Migrations\202204071201198_Created.designer.cs">
+      <DependentUpon>202204071201198_Created.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071203575_Created2.cs" />
+    <Compile Include="Migrations\202204071203575_Created2.designer.cs">
+      <DependentUpon>202204071203575_Created2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071308260_Created3.cs" />
+    <Compile Include="Migrations\202204071308260_Created3.designer.cs">
+      <DependentUpon>202204071308260_Created3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071320135_Created4.cs" />
+    <Compile Include="Migrations\202204071320135_Created4.designer.cs">
+      <DependentUpon>202204071320135_Created4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071426578_created6.cs" />
+    <Compile Include="Migrations\202204071426578_created6.designer.cs">
+      <DependentUpon>202204071426578_created6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071548215_created7.cs" />
+    <Compile Include="Migrations\202204071548215_created7.designer.cs">
+      <DependentUpon>202204071548215_created7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204071650122_created8.cs" />
+    <Compile Include="Migrations\202204071650122_created8.designer.cs">
+      <DependentUpon>202204071650122_created8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204072223500_create11.cs" />
+    <Compile Include="Migrations\202204072223500_create11.designer.cs">
+      <DependentUpon>202204072223500_create11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\WorkOrderWork.cs" />
+    <Compile Include="Presenters\DefaultOrderState.cs" />
+    <Compile Include="Presenters\DefaultRolePresenter.cs" />
+    <Compile Include="Presenters\OwnerPresenter.cs" />
+    <Compile Include="Presenters\ReportPresenter.cs" />
+    <Compile Include="Presenters\WorkerPresenter.cs" />
+    <Compile Include="Presenters\WorkOrderPresenter.cs" />
+    <Compile Include="Presenters\WorkPresenter.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\Forms\AddCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\AddCarForm.Designer.cs">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\AddOwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\AddOwnerForm.Designer.cs">
+      <DependentUpon>AddOwnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\AddWorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\AddWorkerForm.Designer.cs">
+      <DependentUpon>AddWorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\AddWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\AddWorkForm.Designer.cs">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\AddWorkOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\AddWorkOrderForm.Designer.cs">
+      <DependentUpon>AddWorkOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\CalendarColumn.cs" />
+    <Compile Include="Views\Forms\ChoiceCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\ChoiceCarForm.Designer.cs">
+      <DependentUpon>ChoiceCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\DefaultOrderStateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\DefaultOrderStateForm.Designer.cs">
+      <DependentUpon>DefaultOrderStateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\ReportJournalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\ReportJournalForm.Designer.cs">
+      <DependentUpon>ReportJournalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\UpdateWorkOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\UpdateWorkOrderForm.Designer.cs">
+      <DependentUpon>UpdateWorkOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IDefaultRole.cs" />
+    <Compile Include="Views\Forms\DefaultRoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\DefaultRoleForm.Designer.cs">
+      <DependentUpon>DefaultRoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\ExtensionMethods.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\CRUD.cs" />
+    <Compile Include="Models\DefaultRole.cs" />
+    <Compile Include="Models\DefaultOrderState.cs" />
+    <Compile Include="Models\Work.cs" />
+    <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\ServiceStationContext.cs" />
+    <Compile Include="Models\UniTable.cs" />
+    <Compile Include="Models\Worker.cs" />
+    <Compile Include="Models\WorkOrder.cs" />
+    <Compile Include="Presenters\CarPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Forms\UpdateCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\UpdateCarForm.Designer.cs">
+      <DependentUpon>UpdateCarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\UpdateOwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\UpdateOwnerForm.Designer.cs">
+      <DependentUpon>UpdateOwnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ICar.cs" />
+    <Compile Include="Views\IDefaultOrderState.cs" />
+    <Compile Include="Views\IOwner.cs" />
+    <Compile Include="Views\IReport.cs" />
+    <Compile Include="Views\IWork.cs" />
+    <Compile Include="Views\IWorker.cs" />
+    <Compile Include="Views\IWorkOrder.cs" />
+    <EmbeddedResource Include="Migrations\202204021301015_InitialCreate.resx">
+      <DependentUpon>202204021301015_InitialCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071201198_Created.resx">
+      <DependentUpon>202204071201198_Created.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071203575_Created2.resx">
+      <DependentUpon>202204071203575_Created2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071308260_Created3.resx">
+      <DependentUpon>202204071308260_Created3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071320135_Created4.resx">
+      <DependentUpon>202204071320135_Created4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071426578_created6.resx">
+      <DependentUpon>202204071426578_created6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071548215_created7.resx">
+      <DependentUpon>202204071548215_created7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204071650122_created8.resx">
+      <DependentUpon>202204071650122_created8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204072223500_create11.resx">
+      <DependentUpon>202204072223500_create11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\AddCarForm.resx">
+      <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Forms\AddOwnerForm.resx">
+      <DependentUpon>AddOwnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\AddWorkerForm.resx">
+      <DependentUpon>AddWorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\AddWorkForm.resx">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\AddWorkOrderForm.resx">
+      <DependentUpon>AddWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\ChoiceCarForm.resx">
+      <DependentUpon>ChoiceCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\DefaultOrderStateForm.resx">
+      <DependentUpon>DefaultOrderStateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\DefaultRoleForm.resx">
+      <DependentUpon>DefaultRoleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\ReportJournalForm.resx">
+      <DependentUpon>ReportJournalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\Report1.rdlc" />
+    <EmbeddedResource Include="Views\Forms\UpdateCarForm.resx">
+      <DependentUpon>UpdateCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\UpdateOwnerForm.resx">
+      <DependentUpon>UpdateOwnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\UpdateWorkOrderForm.resx">
+      <DependentUpon>UpdateWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.Car.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.DefaultOrderState.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.DefaultRole.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.Owner.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.Work.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.Worker.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.WorkOrder.datasource" />
+    <None Include="Properties\DataSources\WinFormsServiceStationApp.Models.WorkOrderWork.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\D2.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Models\D2_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>D2.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fakes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
